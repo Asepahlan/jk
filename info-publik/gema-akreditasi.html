@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Menggunakan Bootstrap untuk styling responsif -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Judul halaman dengan kata kunci yang relevan untuk SEO -->
+    <title>Gema Akreditasi RS Jasa Kartini | Pelayanan Kesehatan Berkualitas</title>
+
+    <!-- Meta description untuk meningkatkan SEO -->
+    <meta name="description" content="RS Jasa Kartini terus meningkatkan mutu pelayanan kesehatan dengan meraih akreditasi, menjamin standar pelayanan yang berkualitas dan aman bagi pasien.">
+
+    <!-- Open Graph Tags untuk media sosial -->
+    <meta property="og:title" content="Gema Akreditasi RS Jasa Kartini | Pelayanan Kesehatan Berkualitas">
+    <meta property="og:description" content="RS Jasa Kartini berkomitmen untuk memberikan pelayanan kesehatan terbaik yang terakreditasi demi peningkatan mutu dan keamanan pasien.">
+    <meta property="og:image" content="img/akreditasi.jpg">
+    <meta property="og:url" content="https://www.rsjasakartini.com/gema-akreditasi">
+
+    <!-- Favicon untuk ikon browser -->
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+
+    <!-- Kontainer layout memuat header dan navbar dari file layout.html -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout (header dan navbar) dari file layout.html secara dinamis
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Bagian konten utama -->
+    <div class="container my-5">
+        <!-- Heading utama dengan kata kunci SEO yang relevan -->
+        <h2 class="text-center mb-4">Gema Akreditasi RS Jasa Kartini</h2>
+        <p class="text-center">Kami berkomitmen untuk memberikan pelayanan kesehatan terbaik yang terakreditasi.</p>
+        
+        <!-- Bagian informasi mengenai akreditasi rumah sakit -->
+        <div class="row mt-4">
+            <!-- Pengertian Akreditasi -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <!-- Gambar akreditasi dengan alt yang relevan untuk SEO -->
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Proses Akreditasi RS Jasa Kartini">
+                    <div class="card-body">
+                        <h5 class="card-title">Pengertian Akreditasi</h5>
+                        <p class="card-text">Akreditasi adalah proses evaluasi yang dilakukan oleh lembaga independen untuk menilai kualitas pelayanan rumah sakit. Tujuannya adalah untuk meningkatkan mutu pelayanan kepada masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tim Akreditasi -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <!-- Gambar tim akreditasi dengan alt yang relevan -->
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Tim Akreditasi RS Jasa Kartini">
+                    <div class="card-body">
+                        <h5 class="card-title">Tim Akreditasi</h5>
+                        <p class="card-text">Tim akreditasi kami terdiri dari tenaga medis dan non-medis yang berpengalaman, siap untuk memenuhi standar pelayanan yang ditetapkan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian keunggulan RS Jasa Kartini -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Keunggulan RS Jasa Kartini</h5>
+                        <p class="card-text">Dengan akreditasi yang kami raih, kami menjamin:</p>
+                        <!-- Bullet points untuk menekankan keunggulan dengan struktur yang mudah dibaca -->
+                        <ul>
+                            <li>Pelayanan yang lebih berkualitas dan aman bagi pasien.</li>
+                            <li>Standar prosedur yang jelas dan terukur.</li>
+                            <li>Fasilitas yang memadai dan nyaman untuk pasien.</li>
+                            <li>Peningkatan kompetensi tenaga kesehatan melalui pelatihan dan pendidikan berkelanjutan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol CTA untuk menghubungi RS Jasa Kartini -->
+        <div class="text-center mt-4">
+            <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Hubungi Kami untuk Informasi Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <!-- Memuat footer dari file footer.html secara dinamis -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Menentukan bahasa halaman untuk SEO -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Menggunakan Bootstrap untuk styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Judul halaman dengan kata kunci SEO-friendly -->
+    <title>Pelayanan Rawat Jalan RS Jasa Kartini | Konsultasi Dokter dan Layanan Kesehatan</title>
+
+    <!-- Meta description untuk SEO -->
+    <meta name="description" content="RS Jasa Kartini menawarkan berbagai pelayanan rawat jalan seperti konsultasi dokter umum, spesialis, laboratorium, rehabilitasi, vaksinasi, dan pemeriksaan kesehatan berkala.">
+    
+    <!-- Open Graph Tags untuk sharing di sosial media -->
+    <meta property="og:title" content="Pelayanan Rawat Jalan RS Jasa Kartini | Konsultasi dan Layanan Kesehatan">
+    <meta property="og:description" content="Nikmati pelayanan rawat jalan RS Jasa Kartini dengan konsultasi dokter, laboratorium, vaksinasi, dan lainnya.">
+    <meta property="og:image" content="../img/rawat-jalan-rs.jpg"> <!-- Pastikan gambar ini tersedia -->
+    <meta property="og:url" content="https://www.rsjasakartini.com/pelayanan-rawat-jalan">
+
+    <!-- Menyertakan favicon jika tersedia -->
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+    <!-- Kontainer untuk layout (Navbar dan lainnya dimuat secara dinamis dari file layout.html) -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html secara dinamis
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Bagian Pelayanan Rawat Jalan RS Jasa Kartini -->
+    <div class="container my-5">
+        <!-- Heading untuk SEO -->
+        <h2 class="text-center mb-4">Pelayanan Rawat Jalan</h2>
+        <p class="text-center">RS Jasa Kartini menyediakan pelayanan rawat jalan yang komprehensif untuk memenuhi kebutuhan kesehatan Anda.</p>
+
+        <!-- Grid Pelayanan -->
+        <div class="row mt-5">
+            <!-- Pelayanan Konsultasi Dokter Umum -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Konsultasi Dokter Umum</h5>
+                        <p class="card-text">Pelayanan konsultasi kesehatan umum untuk semua usia.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pelayanan Konsultasi Spesialis -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Konsultasi Spesialis</h5>
+                        <p class="card-text">Konsultasi dengan berbagai spesialis sesuai kebutuhan kesehatan Anda.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan Laboratorium -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan Laboratorium</h5>
+                        <p class="card-text">Pengujian laboratorium untuk diagnosa dan pemeriksaan kesehatan.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan Rehabilitasi -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan Rehabilitasi</h5>
+                        <p class="card-text">Program rehabilitasi untuk mendukung pemulihan kesehatan.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan Vaksinasi -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Vaksinasi</h5>
+                        <p class="card-text">Pelayanan vaksinasi untuk melindungi kesehatan Anda dan keluarga.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pemeriksaan Kesehatan Berkala -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemeriksaan Kesehatan Berkala</h5>
+                        <p class="card-text">Pemeriksaan kesehatan rutin untuk mendeteksi penyakit lebih awal.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kontainer untuk footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html secara dinamis
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

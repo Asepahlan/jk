@@ -1,9 +1,23 @@
-<!-- footer.html -->
 <footer>
     <div class="footer-container">
-        <p>Address: Jl. Otto Iskandardinata No. 15 Tasikmalaya</p>
-        <p>Reservation Line: 0265 331808 331641</p>
-        <p>&copy; 2023 RS Jasa Kartini. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <!-- Menambahkan alamat lengkap dengan format yang dapat dibaca oleh mesin pencari -->
+        <p><strong>Alamat:</strong> Jl. Otto Iskandardinata No. 15, Tasikmalaya, Jawa Barat, Indonesia</p>
+
+        <!-- Menambahkan tag untuk nomor telepon dengan microdata schema.org untuk SEO -->
+        <p><strong>Nomor Reservasi:</strong> <span itemprop="telephone">0265 331808</span>, <span itemprop="telephone">0265 331641</span></p>
+
+        <!-- Menambahkan copyright dengan tahun yang dapat diperbarui otomatis -->
+        <p>&copy; <span id="currentYear"></span> RS Jasa Kartini. All rights reserved.</p>
+
+        <!-- Menambahkan link ke kebijakan privasi dan syarat layanan dengan atribut title untuk SEO -->
+        <p>
+            <a href="#" title="Kebijakan Privasi RS Jasa Kartini">Kebijakan Privasi</a> | 
+            <a href="#" title="Syarat dan Ketentuan Layanan RS Jasa Kartini">Syarat dan Ketentuan</a>
+        </p>
     </div>
+
+    <!-- Script untuk menampilkan tahun saat ini secara otomatis -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </footer>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Menggunakan Bootstrap untuk styling responsif -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Judul halaman yang mengandung kata kunci relevan untuk SEO -->
+    <title>Survey Kepuasan Pelanggan RS Jasa Kartini</title>
+
+    <!-- Meta description yang mengandung kata kunci yang relevan untuk meningkatkan SEO -->
+    <meta name="description" content="Isi survey kepuasan pelanggan RS Jasa Kartini untuk memberikan umpan balik Anda dan membantu kami meningkatkan kualitas layanan kesehatan kami.">
+    
+    <!-- Open Graph Tags untuk optimasi saat halaman ini dibagikan di media sosial -->
+    <meta property="og:title" content="Survey Kepuasan Pelanggan RS Jasa Kartini">
+    <meta property="og:description" content="Berikan umpan balik Anda tentang pelayanan RS Jasa Kartini untuk meningkatkan kualitas layanan.">
+    <meta property="og:image" content="img/survey_kepuasan.jpg">
+    <meta property="og:url" content="https://www.rsjasakartini.com/survey-kepuasan">
+
+    <!-- Favicon untuk ikon browser -->
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+
+    <!-- Memuat layout (header dan navbar) dari file layout.html secara dinamis -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Bagian konten utama halaman survey -->
+    <div class="container my-5">
+        <!-- Heading utama dengan kata kunci yang relevan untuk SEO -->
+        <h2 class="text-center mb-4">Survey Kepuasan Pelanggan</h2>
+        <p class="text-center">Kami sangat menghargai umpan balik Anda untuk meningkatkan kualitas layanan kami. Silakan isi survey di bawah ini.</p>
+
+        <!-- Form survey kepuasan pelanggan -->
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <!-- Input nama dengan placeholder yang informatif -->
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <!-- Input email dengan placeholder dan format yang diharuskan -->
+                <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+            </div>
+            <div class="form-group">
+                <label for="pelayanan">Bagaimana Anda menilai pelayanan kami?</label>
+                <!-- Dropdown dengan pilihan penilaian -->
+                <select class="form-control" id="pelayanan" required>
+                    <option value="">Pilih...</option>
+                    <option value="1">Sangat Buruk</option>
+                    <option value="2">Buruk</option>
+                    <option value="3">Cukup</option>
+                    <option value="4">Baik</option>
+                    <option value="5">Sangat Baik</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="komentar">Komentar dan Saran:</label>
+                <!-- Textarea untuk komentar -->
+                <textarea class="form-control" id="komentar" rows="4" placeholder="Masukkan komentar atau saran Anda"></textarea>
+            </div>
+            <!-- Tombol untuk mengirim survey -->
+            <button type="submit" class="btn btn-primary">Kirim Survey</button>
+        </form>
+    </div>
+
+    <!-- Memuat footer dari file footer.html secara dinamis -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS Libraries untuk fungsionalitas Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

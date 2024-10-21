@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Menentukan bahasa halaman untuk SEO -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/career.css">
+
+    <!-- Menggunakan judul yang SEO-friendly dengan kata kunci "Karir" dan "RS Jasa Kartini" -->
+    <title>Karir di RS Jasa Kartini | Lowongan Dokter, Perawat, dan Administrasi</title>
+
+    <!-- Meta Description untuk SEO -->
+    <meta name="description" content="Bergabunglah dengan RS Jasa Kartini dan jadilah bagian dari tim profesional kami. Temukan lowongan pekerjaan untuk Dokter Umum, Perawat, dan Administrasi Kesehatan.">
+    
+    <!-- Open Graph Meta Tags untuk social media sharing -->
+    <meta property="og:title" content="Karir di RS Jasa Kartini | Lowongan Pekerjaan Dokter, Perawat, dan Administrasi">
+    <meta property="og:description" content="RS Jasa Kartini membuka lowongan pekerjaan. Bergabunglah dengan tim kami yang berdedikasi dalam memberikan pelayanan kesehatan terbaik.">
+    <meta property="og:image" content="../img/karir-rs.jpg">
+    <meta property="og:url" content="https://www.rsjasakartini.com/karir">
+</head>
+<body>
+    <!-- Kontainer untuk layout, memuat navbar dan lainnya dari file layout.html -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html secara dinamis
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Section untuk informasi karir -->
+    <section id="career" class="container my-5">
+        <h2 class="text-center mb-4">Karir di RS Jasa Kartini</h2>
+        <!-- Deskripsi singkat tentang lowongan kerja di RS Jasa Kartini -->
+        <p class="text-center">Bergabunglah dengan kami dan jadilah bagian dari tim profesional kami yang berdedikasi untuk memberikan pelayanan kesehatan terbaik.</p>
+        
+        <div class="row mt-5">
+            <!-- Lowongan 1: Dokter Umum -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0 hover-effect">
+                    <div class="card-body">
+                        <!-- Menggunakan heading yang relevan dengan kata kunci pekerjaan -->
+                        <h5 class="card-title">Lowongan Dokter Umum</h5>
+                        <p class="card-text">Kami sedang mencari Dokter Umum dengan pengalaman minimal 2 tahun untuk bergabung dengan tim kami.</p>
+                        <p><strong>Persyaratan:</strong></p>
+                        <ul>
+                            <li>Sarjana Kedokteran</li>
+                            <li>Minimal 2 tahun pengalaman</li>
+                            <li>Bersertifikat STR aktif</li>
+                        </ul>
+                        <!-- Tautan dengan CTA yang jelas untuk pelamar -->
+                        <a href="mailto:hrd@rsjasakartini.com" class="btn btn-primary">Lamar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lowongan 2: Perawat -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0 hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">Lowongan Perawat</h5>
+                        <p class="card-text">RS Jasa Kartini membuka lowongan untuk posisi Perawat dengan pengetahuan di bidang rawat inap.</p>
+                        <p><strong>Persyaratan:</strong></p>
+                        <ul>
+                            <li>D3/S1 Keperawatan</li>
+                            <li>Pengalaman minimal 1 tahun</li>
+                            <li>Sertifikat PPNI</li>
+                        </ul>
+                        <a href="mailto:hrd@rsjasakartini.com" class="btn btn-primary">Lamar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lowongan 3: Administrasi Kesehatan -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0 hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">Lowongan Administrasi Kesehatan</h5>
+                        <p class="card-text">Posisi terbuka untuk staf administrasi di bidang pelayanan kesehatan. Bergabunglah dan bantu operasional harian rumah sakit kami.</p>
+                        <p><strong>Persyaratan:</strong></p>
+                        <ul>
+                            <li>D3/S1 Administrasi atau bidang terkait</li>
+                            <li>Minimal 1 tahun pengalaman</li>
+                            <li>Kemampuan komunikasi dan organisasi yang baik</li>
+                        </ul>
+                        <a href="mailto:hrd@rsjasakartini.com" class="btn btn-primary">Lamar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontainer untuk footer, memuat konten dari file footer.html -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html secara dinamis
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS untuk ikon dan fitur lainnya -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

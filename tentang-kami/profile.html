@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Menentukan bahasa halaman untuk SEO -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Menggunakan Bootstrap untuk styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Judul halaman dengan kata kunci SEO-friendly -->
+    <title>Profil RS Jasa Kartini | Pelayanan Kesehatan Terbaik</title>
+
+    <!-- Meta Description untuk SEO -->
+    <meta name="description" content="RS Jasa Kartini, didirikan pada tahun 1990, berkomitmen menyediakan layanan kesehatan berkualitas tinggi untuk semua kalangan masyarakat.">
+    
+    <!-- Open Graph Tags untuk social media sharing -->
+    <meta property="og:title" content="Profil RS Jasa Kartini | Pelayanan Kesehatan Terbaik">
+    <meta property="og:description" content="RS Jasa Kartini berkomitmen memberikan pelayanan kesehatan dengan standar internasional dan meningkatkan kesejahteraan pasien.">
+    <meta property="og:image" content="../img/hospital-building.jpg"> <!-- Pastikan gambar ini tersedia -->
+    <meta property="og:url" content="https://www.rsjasakartini.com/profil">
+
+    <!-- Tambahkan favicon jika ada -->
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+    <!-- Kontainer untuk layout (Navbar dan lainnya dimuat secara dinamis dari file layout.html) -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html secara dinamis
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Bagian Profil RS Jasa Kartini -->
+    <div class="container my-5">
+        <!-- Judul bagian Profil untuk SEO -->
+        <h2 class="text-center mb-4">Profil RS Jasa Kartini</h2>
+
+        <!-- Konten profil dibagi dalam dua kolom -->
+        <div class="row">
+            <!-- Sejarah RS Jasa Kartini -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0">
+                    <!-- Gambar Rumah Sakit -->
+                    <img src="../img/pngtree-cartoon-hand-drawn-line-illustration-hospital-building-vector-elements-png-image_4221808.png" alt="Gedung Rumah Sakit RS Jasa Kartini" class="card-img-top img-fluid rounded">
+                    <div class="card-body">
+                        <h5 class="card-title">Sejarah Rumah Sakit</h5>
+                        <p class="card-text">
+                            RS Jasa Kartini telah melayani masyarakat sejak tahun 1990, berkomitmen memberikan pelayanan kesehatan berkualitas dengan standar internasional. Kami terus berinovasi dan meningkatkan fasilitas serta layanan untuk memastikan kepuasan dan kesejahteraan pasien.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visi dan Misi RS Jasa Kartini -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Visi dan Misi</h5>
+                        <p class="card-text">
+                            Visi kami adalah menjadi rumah sakit terdepan dalam pelayanan kesehatan. Misi kami adalah memberikan layanan kesehatan yang berkualitas dan terjangkau untuk seluruh lapisan masyarakat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kontainer untuk footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html secara dinamis
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

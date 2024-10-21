@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Meta charset penting untuk mendefinisikan encoding karakter halaman -->
+    <meta charset="UTF-8">
+
+    <!-- Meta viewport untuk membuat halaman responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link ke Bootstrap untuk tata letak responsif dan styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Title yang dioptimalkan dengan kata kunci yang relevan untuk SEO -->
+    <title>Galeri RS Jasa Kartini</title>
+
+    <!-- Meta description untuk mendeskripsikan halaman ke mesin pencari -->
+    <meta name="description" content="Lihat galeri foto kegiatan RS Jasa Kartini, seperti pemeriksaan kesehatan, donor darah, dan bakti sosial, yang berfokus pada kesehatan masyarakat.">
+
+    <!-- Open Graph meta tags untuk optimasi ketika halaman dibagikan di media sosial -->
+    <meta property="og:title" content="Galeri RS Jasa Kartini">
+    <meta property="og:description" content="Kunjungi galeri foto RS Jasa Kartini untuk melihat kegiatan seperti pemeriksaan kesehatan dan bakti sosial.">
+    <meta property="og:image" content="../img/kg1.jpg">
+    <meta property="og:url" content="https://www.rsjasakartini.com/galeri">
+
+    <!-- Favicon untuk ikon halaman di browser -->
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+
+    <!-- Div ini akan menampilkan layout atau header yang dimuat dari file layout.html -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html menggunakan fetch API
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Menampilkan isi layout.html di dalam div layout-container
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Konten galeri utama -->
+    <div class="container my-5">
+        <!-- Menggunakan heading H2 untuk memberikan struktur yang baik dan SEO-friendly -->
+        <h2 class="text-center mb-4">Galeri RS Jasa Kartini</h2>
+        <p class="text-center mb-5">Berikut adalah beberapa momen berharga dari kegiatan kami di RS Jasa Kartini.</p>
+
+        <!-- Menggunakan grid system Bootstrap untuk mengatur layout foto galeri -->
+        <div class="row">
+            <!-- Setiap kolom mewakili satu kegiatan dengan gambar dan deskripsi -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <!-- Menggunakan atribut alt yang relevan untuk meningkatkan SEO gambar -->
+                    <img src="../img/kg1.jpg" class="card-img-top" alt="Kegiatan Pemeriksaan Kesehatan">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemeriksaan Kesehatan</h5>
+                        <p class="card-text">Kegiatan pemeriksaan kesehatan yang dilakukan oleh tenaga medis kami di masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../img/kg2.jpeg" class="card-img-top" alt="Bakti Sosial">
+                    <div class="card-body">
+                        <h5 class="card-title">Bakti Sosial</h5>
+                        <p class="card-text">Tim RS Jasa Kartini melakukan bakti sosial untuk memberikan bantuan kepada yang membutuhkan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../img/kg3.jpeg" class="card-img-top" alt="Donor Darah">
+                    <div class="card-body">
+                        <h5 class="card-title">Donor Darah</h5>
+                        <p class="card-text">Kegiatan donor darah yang diadakan oleh RS Jasa Kartini dengan partisipasi aktif masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../img/kg5.png" class="card-img-top" alt="Penyuluhan Kesehatan">
+                    <div class="card-body">
+                        <h5 class="card-title">Penyuluhan Kesehatan</h5>
+                        <p class="card-text">Penyuluhan kesehatan yang bertujuan untuk meningkatkan kesadaran akan pentingnya hidup sehat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../img/kg4.jpeg" class="card-img-top" alt="Kegiatan Anak Sehat">
+                    <div class="card-body">
+                        <h5 class="card-title">Kegiatan Anak Sehat</h5>
+                        <p class="card-text">Program untuk mempromosikan kesehatan di kalangan anak-anak di sekitar RS Jasa Kartini.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../img/kg5.jpeg" class="card-img-top" alt="Kampanye Kesehatan">
+                    <div class="card-body">
+                        <h5 class="card-title">Kampanye Kesehatan</h5>
+                        <p class="card-text">Kampanye kesehatan yang melibatkan masyarakat untuk menjaga kesehatan bersama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer dimuat secara dinamis dari file footer.html -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html menggunakan fetch API
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Menampilkan isi footer.html di dalam div footer-container
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS Libraries untuk fungsionalitas Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

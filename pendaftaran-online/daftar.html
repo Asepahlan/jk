@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Jalur ke CSS -->
+    <title>Pendaftaran Online</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="text-center">Pendaftaran Online</h2>
+        <form action="#" method="POST" target="_blank" onsubmit="openNewTab(event)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="namaLengkap">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="namaLengkap" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="noIdentitas">Nomor Identitas (KTP/ID)</label>
+                    <input type="text" class="form-control" id="noIdentitas" placeholder="Nomor Identitas" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="tanggalLahir">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="tanggalLahir" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="noHp">Nomor Telepon/HP</label>
+                    <input type="tel" class="form-control" id="noHp" placeholder="Nomor Telepon" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <input type="text" class="form-control" id="alamat" placeholder="Alamat Lengkap" required>
+            </div>
+            <div class="form-group">
+                <label for="jenisKelamin">Jenis Kelamin</label>
+                <select id="jenisKelamin" class="form-control" required>
+                    <option value="" selected>Pilih...</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="poli">Poli yang Dituju</label>
+                    <select id="poli" class="form-control" required>
+                        <option value="" selected>Pilih Poli...</option>
+                        <option value="Umum">Poli Umum</option>
+                        <option value="Gigi">Poli Gigi</option>
+                        <option value="Kebidanan">Poli Kebidanan</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tanggalKunjungan">Tanggal Kunjungan</label>
+                    <input type="date" class="form-control" id="tanggalKunjungan" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Daftar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script> <!-- Jalur ke JS -->
+</body>
+</html>

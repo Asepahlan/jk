@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Menggunakan Bootstrap untuk styling responsif -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Judul halaman dengan kata kunci SEO-friendly -->
+    <title>Pelayanan Unggulan RS Jasa Kartini | Pemeriksaan, Rehabilitasi, Vaksinasi</title>
+
+    <!-- Meta description untuk SEO -->
+    <meta name="description" content="RS Jasa Kartini menawarkan pelayanan unggulan seperti pemeriksaan kesehatan, konsultasi spesialis, rehabilitasi medik, dan vaksinasi.">
+    
+    <!-- Open Graph Tags untuk optimasi SEO dan media sosial -->
+    <meta property="og:title" content="Pelayanan Unggulan RS Jasa Kartini | Pemeriksaan, Rehabilitasi, Vaksinasi">
+    <meta property="og:description" content="RS Jasa Kartini memberikan pelayanan kesehatan berkualitas, mulai dari pemeriksaan menyeluruh, konsultasi spesialis hingga program rehabilitasi dan vaksinasi.">
+    <meta property="og:image" content="../img/pelayanan-unggulan-rs.jpg"> <!-- Gambar yang representatif -->
+    <meta property="og:url" content="https://www.rsjasakartini.com/pelayanan-unggulan">
+
+    <!-- Favicon untuk identitas visual di browser -->
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+
+    <!-- Layout kontainer yang memuat navbar dan lainnya dari file layout.html -->
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html secara dinamis
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Bagian Pelayanan Unggulan -->
+    <div class="container my-5">
+        <!-- Heading utama dengan kata kunci SEO yang relevan -->
+        <h2 class="text-center mb-4">Pelayanan Unggulan RS Jasa Kartini</h2>
+        <p class="text-center">Kami menyediakan berbagai pelayanan unggulan untuk memenuhi kebutuhan kesehatan Anda dengan layanan yang berkualitas.</p>
+        
+        <!-- Grid layanan unggulan -->
+        <div class="row mt-4">
+            <!-- Layanan 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Pemeriksaan Kesehatan Menyeluruh">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 1: Pemeriksaan Kesehatan Menyeluruh</h5>
+                        <p class="card-text">Pemeriksaan kesehatan lengkap dengan analisis mendalam untuk mendeteksi dini masalah kesehatan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Konsultasi Spesialis">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 2: Konsultasi Spesialis</h5>
+                        <p class="card-text">Konsultasi dengan dokter spesialis berpengalaman di berbagai bidang kesehatan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Rehabilitasi Medik">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 3: Rehabilitasi Medik</h5>
+                        <p class="card-text">Program rehabilitasi untuk membantu pasien pulih setelah menjalani perawatan medis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Baris kedua layanan unggulan -->
+        <div class="row mt-4">
+            <!-- Layanan 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Pelayanan Gizi">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 4: Pelayanan Gizi</h5>
+                        <p class="card-text">Konsultasi dan pengaturan diet yang tepat sesuai dengan kebutuhan kesehatan Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Vaksinasi">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 5: Vaksinasi</h5>
+                        <p class="card-text">Vaksinasi untuk berbagai penyakit sebagai langkah pencegahan yang efektif.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan1.png" class="card-img-top" alt="Program Kesehatan Mental">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 6: Program Kesehatan Mental</h5>
+                        <p class="card-text">Dukungan kesehatan mental melalui konseling dan terapi untuk kesejahteraan Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action untuk menghubungi rumah sakit -->
+        <div class="text-center mt-4">
+            <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Hubungi Kami untuk Informasi Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <!-- Footer kontainer yang dimuat dari file footer.html -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html secara dinamis
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
