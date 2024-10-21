@@ -200,3 +200,22 @@ footer a:hover {
 .list-unstyled {
     padding-left: 0; /* Menghilangkan padding default */
 }
+
+/* Gaya untuk Formulir Pendaftaran */
+.container {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    border-radius: 10px; /* Sudut membulat */
+    padding: 30px; /* Padding di dalam kontainer */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+h2 {
+    color: #007bff; /* Warna judul */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Mengurangi padding pada perangkat kecil */
+    }
+}

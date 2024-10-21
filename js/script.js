@@ -74,3 +74,18 @@ document.querySelectorAll('.list-unstyled li').forEach(item => {
         alert('Anda mengklik misi: ' + item.textContent);
     });
 });
+
+function openNewTab(event) {
+    event.preventDefault(); // Mencegah pengiriman formulir default
+    const form = event.target;
+
+    // Simulasi pengiriman data ke server
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Membuka tab baru dan menampilkan data (simulasi)
+    const newTab = window.open();
+    newTab.document.write('<h1>Data Pendaftaran</h1>');
+    newTab.document.write('<pre>' + JSON.stringify(data, null, 2) + '</pre>');
+    newTab.document.close();
+}
