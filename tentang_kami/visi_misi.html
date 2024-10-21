@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Visi & Misi RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Vision and Mission Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Visi dan Misi RS Jasa Kartini</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Visi</h3>
+                        <p class="card-text text-center">
+                            Menjadi rumah sakit terkemuka yang memberikan pelayanan kesehatan berkualitas dengan mengutamakan kepuasan pasien dan inovasi di bidang kesehatan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Misi</h3>
+                        <ul class="list-unstyled text-center">
+                            <li class="mb-3">
+                                <i class="fas fa-user-md fa-2x text-success mb-2"></i>
+                                <p>Menyediakan layanan kesehatan yang terjangkau bagi semua kalangan masyarakat.</p>
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-hospital-alt fa-2x text-success mb-2"></i>
+                                <p>Meningkatkan fasilitas kesehatan dengan teknologi terkini.</p>
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-heartbeat fa-2x text-success mb-2"></i>
+                                <p>Menyediakan pelayanan kesehatan dengan standar kualitas tinggi dan profesionalisme.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script> <!-- Jalur ke JS -->
+</body>
+</html>

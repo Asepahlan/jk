@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Galeri RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Galeri RS Jasa Kartini</h2>
+        <p class="text-center mb-5">Berikut adalah beberapa momen berharga dari kegiatan kami di RS Jasa Kartini.</p>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/galeri_1.jpg" class="card-img-top" alt="Kegiatan 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemeriksaan Kesehatan</h5>
+                        <p class="card-text">Kegiatan pemeriksaan kesehatan yang dilakukan oleh tenaga medis kami di masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/galeri_2.jpg" class="card-img-top" alt="Kegiatan 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Bakti Sosial</h5>
+                        <p class="card-text">Tim RS Jasa Kartini melakukan bakti sosial untuk memberikan bantuan kepada yang membutuhkan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/galeri_3.jpg" class="card-img-top" alt="Kegiatan 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Donor Darah</h5>
+                        <p class="card-text">Kegiatan donor darah yang diadakan oleh RS Jasa Kartini dengan partisipasi aktif masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/galeri_4.jpg" class="card-img-top" alt="Kegiatan 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Penyuluhan Kesehatan</h5>
+                        <p class="card-text">Penyuluhan kesehatan yang bertujuan untuk meningkatkan kesadaran akan pentingnya hidup sehat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/galeri_5.jpg" class="card-img-top" alt="Kegiatan 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Kegiatan Anak Sehat</h5>
+                        <p class="card-text">Program untuk mempromosikan kesehatan di kalangan anak-anak di sekitar RS Jasa Kartini.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/galeri_6.jpg" class="card-img-top" alt="Kegiatan 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Kampanye Kesehatan</h5>
+                        <p class="card-text">Kampanye kesehatan yang melibatkan masyarakat untuk menjaga kesehatan bersama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

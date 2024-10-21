@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Instalasi Gawat Darurat RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Instalasi Gawat Darurat Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Instalasi Gawat Darurat (IGD)</h2>
+        <p class="text-center">RS Jasa Kartini menyediakan layanan Instalasi Gawat Darurat 24 jam dengan tenaga medis yang profesional dan fasilitas yang memadai.</p>
+        
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/IGD-4.avif" class="card-img-top" alt="Instalasi Gawat Darurat">
+                    <div class="card-body">
+                        <h5 class="card-title">Fasilitas IGD</h5>
+                        <p class="card-text">IGD kami dilengkapi dengan peralatan medis terkini dan ruang tunggu yang nyaman untuk pasien dan keluarga.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/ilustrasi_tenaga_medis.jpg" class="card-img-top" alt="Tim Medis IGD">
+                    <div class="card-body">
+                        <h5 class="card-title">Tim Medis Profesional</h5>
+                        <p class="card-text">Tim medis kami terdiri dari dokter spesialis dan perawat berpengalaman siap memberikan penanganan terbaik dalam situasi darurat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/layanan igd.jpg" class="card-img-top" alt="Layanan IGD">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan IGD</h5>
+                        <p class="card-text">Kami menyediakan berbagai layanan, termasuk triase, pengobatan darurat, dan rujukan ke rumah sakit lain jika diperlukan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="../img/pngtree-cartoon-image-of-doctors-educating-children-about-hygiene-png-image_7243405.png" class="card-img-top" alt="Edukasi Kesehatan">
+                    <div class="card-body">
+                        <h5 class="card-title">Edukasi Kesehatan</h5>
+                        <p class="card-text">Kami juga memberikan edukasi kepada masyarakat tentang tindakan yang harus dilakukan dalam situasi darurat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Hubungi Kami</a>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

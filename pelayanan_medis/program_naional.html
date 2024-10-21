@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Program Nasional RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+    <!-- Program Nasional Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Program Nasional RS Jasa Kartini</h2>
+        <p class="text-center">Kami berkomitmen untuk mendukung berbagai program nasional dalam bidang kesehatan demi meningkatkan kualitas hidup masyarakat.</p>
+
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Program Imunisasi</h5>
+                        <p class="card-text">Menyediakan layanan imunisasi untuk anak-anak dan orang dewasa sesuai dengan jadwal program nasional.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Program Kesehatan Ibu dan Anak</h5>
+                        <p class="card-text">Program untuk meningkatkan kesehatan ibu dan anak, termasuk pemeriksaan kesehatan rutin.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Program Gizi Seimbang</h5>
+                        <p class="card-text">Edukasi tentang pentingnya gizi seimbang dan pola makan sehat.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Program Deteksi Dini Penyakit</h5>
+                        <p class="card-text">Pemeriksaan kesehatan untuk mendeteksi penyakit secara dini.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Program Pencegahan Penyakit</h5>
+                        <p class="card-text">Edukasi dan vaksinasi untuk mencegah penyebaran penyakit menular.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Program Kesehatan Mental</h5>
+                        <p class="card-text">Pelayanan dan dukungan bagi kesehatan mental masyarakat.</p>
+                        <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+ 

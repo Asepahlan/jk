@@ -1,0 +1,202 @@
+/* css/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa; /* Warna latar belakang navbar */
+}
+
+.navbar {
+    padding: 15px;
+    background-color: #007bff; /* Warna latar belakang navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan untuk navbar */
+}
+
+.logo {
+    width: 150px; /* Atur ukuran logo sesuai kebutuhan */
+}
+
+.navbar-brand img {
+    width: 120px; /* Ukuran logo */
+    transition: transform 0.3s; /* Efek transisi saat hover */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Membesarkan logo saat hover */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Warna teks menu */
+    margin-left: 20px;
+    font-weight: bold; /* Menebalkan teks */
+    transition: color 0.3s; /* Efek transisi saat hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Warna saat hover */
+}
+
+.dropdown-menu {
+    background-color: #007bff; /* Warna latar belakang dropdown */
+}
+
+.dropdown-item {
+    color: white; /* Warna teks item dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: #155724; /* Warna saat hover item dropdown */
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Atur tinggi sesuai kebutuhan */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+#hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Gaya untuk Footer */
+footer {
+    background-color: #2c3e50; /* Warna latar belakang footer */
+    color: #ecf0f1; /* Warna teks footer */
+    padding: 30px 0; /* Jarak atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+    position: relative; /* Posisi relatif untuk footer */
+    bottom: 0; /* Menempel di bagian bawah */
+    width: 100%; /* Lebar penuh */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Bayangan atas */
+}
+
+footer .footer-container {
+    max-width: 800px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Rata tengah */
+    padding: 15px; /* Padding di dalam kontainer */
+    border-radius: 8px; /* Sudut membulat */
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+}
+
+footer p {
+    margin: 5px 0; /* Jarak antar paragraf */
+    font-size: 1em; /* Ukuran font */
+}
+
+footer a {
+    color: #ecf0f1; /* Warna tautan */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: color 0.3s; /* Efek transisi saat hover */
+}
+
+footer a:hover {
+    color: #3498db; /* Warna saat hover */
+}
+
+.card {
+    margin-bottom: 20px; /* Jarak antar kartu */
+    border-radius: 15px; /* Membuat sudut card lebih bulat */
+    transition: transform 0.3s; /* Efek transisi saat hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek mengangkat saat hover */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Ukuran font judul */
+    font-weight: bold; /* Menebalkan judul card */
+    color: #007bff; /* Warna judul */
+}
+
+.card-text {
+    font-size: 1rem; /* Ukuran font untuk teks card */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 10px; /* Mengurangi margin pada perangkat kecil */
+    }
+
+    .hero {
+        height: 300px; /* Tinggi hero untuk perangkat kecil */
+    }
+
+    .text {
+        font-size: 1.2rem; /* Ukuran font untuk perangkat kecil */
+    }
+
+    .navbar-brand img {
+        width: 100px; /* Ukuran logo lebih kecil pada perangkat kecil */
+    }
+
+    footer {
+        font-size: 0.9em; /* Ukuran font lebih kecil pada perangkat kecil */
+    }
+
+    .container {
+        padding: 20px; /* Mengurangi padding pada perangkat kecil */
+    }
+}
+
+.social-icons a {
+    font-size: 1.5em; /* Ukuran ikon sosial */
+}
+
+.card-img-top {
+    border-top-left-radius: 15px; /* Membulatkan sudut atas gambar */
+    border-top-right-radius: 15px; /* Membulatkan sudut atas gambar */
+}
+
+/* Gaya untuk Visi dan Misi */
+.container {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    border-radius: 10px; /* Sudut membulat */
+    padding: 30px; /* Padding di dalam kontainer */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+.list-unstyled {
+    padding-left: 0; /* Menghilangkan padding default */
+}

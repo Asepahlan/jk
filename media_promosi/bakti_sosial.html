@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Bakti Sosial RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Kegiatan Bakti Sosial RS Jasa Kartini</h2>
+        <p class="text-center mb-5">Kami di RS Jasa Kartini percaya bahwa kesehatan adalah hak setiap individu. Oleh karena itu, kami secara rutin mengadakan kegiatan bakti sosial untuk membantu masyarakat yang membutuhkan.</p>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/bakti_sosial_1.jpg" class="card-img-top" alt="Bakti Sosial 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Kegiatan Donor Darah</h5>
+                        <p class="card-text">Kegiatan donor darah ini dilaksanakan pada tanggal 15 Maret 2024, berhasil mengumpulkan lebih dari 100 kantong darah untuk membantu pasien yang membutuhkan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/bakti_sosial_2.jpg" class="card-img-top" alt="Bakti Sosial 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemeriksaan Kesehatan Gratis</h5>
+                        <p class="card-text">Kami mengadakan pemeriksaan kesehatan gratis bagi masyarakat di sekitar rumah sakit pada tanggal 10 April 2024, dengan lebih dari 200 orang yang terlayani.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/bakti_sosial_3.jpg" class="card-img-top" alt="Bakti Sosial 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemberian Bantuan Sembako</h5>
+                        <p class="card-text">Pada tanggal 25 Mei 2024, kami membagikan paket sembako kepada keluarga kurang mampu di daerah sekitar, sebagai bentuk kepedulian sosial kami.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/bakti_sosial_4.jpg" class="card-img-top" alt="Bakti Sosial 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Kegiatan Penyuluhan Kesehatan</h5>
+                        <p class="card-text">Kegiatan penyuluhan kesehatan dilaksanakan pada tanggal 5 Juni 2024, dengan tema "Pentingnya Gaya Hidup Sehat".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

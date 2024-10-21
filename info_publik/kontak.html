@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Kontak RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Kontak Kami</h2>
+        <p class="text-center">Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi kami melalui formulir di bawah ini.</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+            </div>
+            <div class="form-group">
+                <label for="subjek">Subjek:</label>
+                <input type="text" class="form-control" id="subjek" placeholder="Masukkan subjek" required>
+            </div>
+            <div class="form-group">
+                <label for="pesan">Pesan:</label>
+                <textarea class="form-control" id="pesan" rows="4" placeholder="Masukkan pesan Anda" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        </form>
+    </div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pelayanan Unggulan RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!-- Pelayanan Unggulan Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Pelayanan Unggulan RS Jasa Kartini</h2>
+        <p class="text-center">Kami menyediakan berbagai pelayanan unggulan untuk memenuhi kebutuhan kesehatan Anda dengan layanan yang berkualitas.</p>
+        
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/layanan_1.jpg" class="card-img-top" alt="Layanan Unggulan 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 1: Pemeriksaan Kesehatan Menyeluruh</h5>
+                        <p class="card-text">Pemeriksaan kesehatan lengkap dengan analisis mendalam untuk mendeteksi dini masalah kesehatan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/layanan_2.jpg" class="card-img-top" alt="Layanan Unggulan 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 2: Konsultasi Spesialis</h5>
+                        <p class="card-text">Konsultasi dengan dokter spesialis berpengalaman di berbagai bidang kesehatan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/layanan_3.jpg" class="card-img-top" alt="Layanan Unggulan 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 3: Rehabilitasi Medik</h5>
+                        <p class="card-text">Program rehabilitasi untuk membantu pasien pulih setelah menjalani perawatan medis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/layanan_4.jpg" class="card-img-top" alt="Layanan Unggulan 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 4: Pelayanan Gizi</h5>
+                        <p class="card-text">Konsultasi dan pengaturan diet yang tepat sesuai dengan kebutuhan kesehatan Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/layanan_5.jpg" class="card-img-top" alt="Layanan Unggulan 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 5: Vaksinasi</h5>
+                        <p class="card-text">Vaksinasi untuk berbagai penyakit sebagai langkah pencegahan yang efektif.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/layanan_6.jpg" class="card-img-top" alt="Layanan Unggulan 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Layanan 6: Program Kesehatan Mental</h5>
+                        <p class="card-text">Dukungan kesehatan mental melalui konseling dan terapi untuk kesejahteraan Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Hubungi Kami untuk Informasi Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

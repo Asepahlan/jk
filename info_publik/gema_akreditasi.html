@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Gema Akreditasi RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Gema Akreditasi RS Jasa Kartini</h2>
+        <p class="text-center">Kami berkomitmen untuk memberikan pelayanan kesehatan terbaik yang terakreditasi.</p>
+        
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/akreditasi.jpg" class="card-img-top" alt="Gema Akreditasi">
+                    <div class="card-body">
+                        <h5 class="card-title">Pengertian Akreditasi</h5>
+                        <p class="card-text">Akreditasi adalah proses evaluasi yang dilakukan oleh lembaga independen untuk menilai kualitas pelayanan rumah sakit. Tujuannya adalah untuk meningkatkan mutu pelayanan kepada masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="img/tim_akreditasi.jpg" class="card-img-top" alt="Tim Akreditasi">
+                    <div class="card-body">
+                        <h5 class="card-title">Tim Akreditasi</h5>
+                        <p class="card-text">Tim akreditasi kami terdiri dari tenaga medis dan non-medis yang berpengalaman, siap untuk memenuhi standar pelayanan yang ditetapkan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Keunggulan RS Jasa Kartini</h5>
+                        <p class="card-text">Dengan akreditasi yang kami raih, kami menjamin:</p>
+                        <ul>
+                            <li>Pelayanan yang lebih berkualitas dan aman bagi pasien.</li>
+                            <li>Standar prosedur yang jelas dan terukur.</li>
+                            <li>Fasilitas yang memadai dan nyaman untuk pasien.</li>
+                            <li>Peningkatan kompetensi tenaga kesehatan melalui pelatihan dan pendidikan berkelanjutan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="mailto:info@rsjasakartini.com" class="btn btn-primary">Hubungi Kami untuk Informasi Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

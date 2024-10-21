@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Survey Kepuasan Pelanggan RS Jasa Kartini</title>
+</head>
+<body>
+    <div id="layout-container"></div>
+
+    <script>
+        // Memuat layout dari file layout.html
+        fetch('../layout.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Survey Kepuasan Pelanggan</h2>
+        <p class="text-center">Kami sangat menghargai umpan balik Anda untuk meningkatkan kualitas layanan kami. Silakan isi survey di bawah ini.</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+            </div>
+            <div class="form-group">
+                <label for="pelayanan">Bagaimana Anda menilai pelayanan kami?</label>
+                <select class="form-control" id="pelayanan" required>
+                    <option value="">Pilih...</option>
+                    <option value="1">Sangat Buruk</option>
+                    <option value="2">Buruk</option>
+                    <option value="3">Cukup</option>
+                    <option value="4">Baik</option>
+                    <option value="5">Sangat Baik</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="komentar">Komentar dan Saran:</label>
+                <textarea class="form-control" id="komentar" rows="4" placeholder="Masukkan komentar atau saran Anda"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Survey</button>
+        </form>
+    </div>
+
+    <script>
+        // Memuat footer dari file footer.html
+        fetch('../footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
